@@ -1,0 +1,36 @@
+<div class="formulario">
+    <a routerLink="../estante" class="cerrar">
+        <span>X</span>
+    </a>
+
+
+    <form [formGroup]="formventa" (submit)="venderpro()">
+        <div class="campos">
+            <label  for="nombre">nombre:</label><br>
+            <input  class="form-control"  formControlName="nombre" id="nombre" type="text">
+        </div>
+        <div class="campos">
+            <label for="precio">precio</label><br>
+            <input  class="form-control" formControlName="precio" id="precio" type="number">
+        </div>
+        <div class="campos">
+            <label for="descripcion">descripcion:</label><br>
+            <textarea placeholder="opcional"  class="form-control" formControlName="descripcion" id="descripcion" type="text"></textarea>
+        </div>
+        <div class="campos">
+            <label for="categoria">categoria:</label><br>
+            <input  class="form-control" formControlName="categoria" id="categoria" type="text">
+        </div>
+        <div class="campos">
+            <label  >foto:</label><br>
+            <div class="contenfoto">
+                <img src="{{urlimgactual}}" alt="">
+            </div><br>
+            <label for="fi" class="btn bg-dark " style="color: aliceblue; margin-right: 30px;">seleccionar imagen</label>
+
+            <input style="display: none;" (change)="cargarImagen($event)" name="" id="fi" type="file">
+            <input #botonEnvio value="publicar venta" class="btn btn-primary mt" type="submit">
+        </div>
+    </form>
+
+</div>

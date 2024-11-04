@@ -1,0 +1,27 @@
+<div class="tienda">
+    <div class="cabesa">
+        <img class="perfil" src="{{urlImg}}" alt="">
+        <h3>mis productos</h3>
+        <strong class="pc">{{usuario_.nombre}}</strong>
+    </div>
+    <div class="acciones">
+        <h4>listado de productos a vender</h4>
+        <input placeholder="buscar" class="form-control" type="search">
+        <button class="btn bn">buscar</button>
+        <a routerLink="../aggpro"><button class="btn bn">agregar +</button></a>
+    </div>
+    <div class="listapro">
+        <div *ngFor="let pu of productos" class="pro1">
+            <span class="nombrep">{{pu.nombre}}</span>
+            <div class="img-container">
+                <img src="{{pu.urlImg}}" alt="">
+            </div>
+            <span class="descripcion"> 
+                <span class="desdes">{{pu.descripcion}}</span>
+                <p  class="precio"> ${{pu.precio}}</p>
+            </span>
+            <button class="btn bn">editar</button>
+        </div>
+    </div>
+</div>
+

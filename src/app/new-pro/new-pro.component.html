@@ -1,0 +1,13 @@
+<div class="listapro">
+    <div *ngFor="let pu of productosPubli" class="pro1">
+        <span class="nombrep">{{pu.nombre}}</span>
+        <div class="img-container">
+            <img src="{{pu.urlImg}}" alt="">
+        </div>
+        <span class="descripcion"> 
+            <span class="desdes">{{pu.descripcion}}</span>
+            <p  class="precio"> ${{pu.precio}}</p>
+        </span>
+        <button class="btn bn">comprar</button>
+    </div>
+</div>

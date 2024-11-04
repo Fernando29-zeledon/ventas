@@ -1,0 +1,77 @@
+.formulario {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 5px black;
+    margin: auto;
+    width: 60%; 
+    height: auto;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 10px;
+    position: relative;
+}
+.cerrar{
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    right:calc(0px - 10px);
+    top: calc(0px - 10px);
+    font-weight: bold;
+    border-radius: 50%;
+    background-color: brown;
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 5cap brown;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+}
+textarea {
+    height: 80px; /* Establece la altura fija */
+    resize: none; /* Deshabilita la opción de redimensionamiento */
+    padding: 10px; /* Añade relleno para mejorar la apariencia */
+    box-sizing: border-box; /* Incluye el relleno en el tamaño total del elemento */
+    font-family: Arial, sans-serif; /* Elige la fuente deseada */
+    font-size: 14px; /* Establece el tamaño de fuente */
+}
+.cerrar:hover{
+    box-shadow: 0px 0px 5px 5px brown;
+}
+
+.campos .contenfoto {
+    width: 400px;
+    min-height: 80px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.campos .contenfoto img{
+    width: 300px;
+    object-fit: contain;
+}
+
+.formulario .campos label {
+    font-weight: bold;
+}
+@media screen and (max-width:900px){
+    .formulario {
+        width: 500px;
+    }
+}
+@media screen and (max-width:554px){
+    .formulario {
+        width: 95%;
+    }
+    .mt{
+        margin-top: 5px;
+    }
+    .campos .contenfoto {
+        width: 100%;
+    }
+    .campos .contenfoto img{
+        width: 90%;
+        object-fit: contain;
+    }
+}

@@ -1,0 +1,18 @@
+<div class="cabecera">
+    <div class="navegador">
+        <h1>ventasYa</h1>
+        <div class="contnav">
+            <div class="navega">
+                <ul class="listaopciones">
+                    <li (click)="ir('')">perfil</li>
+                    <li  *ngIf="estaloguado()" (click)="ir('estante')">estante</li>
+                    <li (click)="ir('preguntas')">informacion</li>
+                    <li *ngIf="!estaloguado()" (click)="ir('login')">login</li>
+                    <li *ngIf="estaloguado()"(click)="ir('salir')">salir</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+

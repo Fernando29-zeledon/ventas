@@ -1,0 +1,20 @@
+
+<div class="targeta">
+    <form #formlog="ngForm" class="form" (ngSubmit)="entrar(formlog)">
+        <div class="mb-3 seccionesinput ">
+            <label for="usuario" class="form-label">Email</label>
+            <input name="usuario"type="text" class="form-control" id="usuario" placeholder="Ingrese su usuario" ngModel>
+        </div>
+        <div class="mb-3 seccionesinput ">
+            <label for="contrasena" class="form-label">Contraseña</label>
+            <input name="contrasena" type="password" class="form-control" id="contrasena" placeholder="Ingrese su contraseña" ngModel>
+        </div>
+        <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+        no tienes una cuenta?
+        <div class="centrar">
+            <button class="crear" style="background-color: rgb(248, 239, 239);" (click)="ir('crearperfil')">crear +</button>
+        </div>
+    </form>
+</div>
+
+

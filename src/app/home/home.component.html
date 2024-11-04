@@ -1,0 +1,24 @@
+<div class="relativ">
+    <div class="contenedor" >
+        <div title="has click para cambiar (no disponible)" (click)="ir('subirfoto')" [ngStyle]="{'background-image':direccionimg}" class="perfilfoto"></div>
+        
+        <div class="ficha_usuario" *ngIf="persona.nombre!=''">
+            <p>NOMBRE: {{persona.nombre}}</p>
+            <p>CORREO: {{persona.correo}}</p>
+            <p>ID_: {{persona.id}}</p>
+        </div>
+    
+        <div style="margin: 10px;">
+            <div class="nologin" *ngIf="persona.nombre==''"><span>!inicia la seccion</span></div>
+            <a routerLink="crearperfil" class=" nologin ir" *ngIf="persona.nombre==''"><span>crear mi usuario</span></a>
+            <a routerLink="./login" class=" nologin ir" *ngIf="persona.nombre==''"><span>login</span></a>
+        </div>
+    </div>
+    
+    <div  style="width: 100%;display: flex; justify-content: center;">
+        <button (click)="ir('newpro')" class="btn btn-success">ir a ver prodcutos ofertados</button>
+    </div>
+    <br><br>
+</div> 
+
+
